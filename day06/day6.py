@@ -22,19 +22,12 @@ def advance(state):
     return new
 
 
-def part1():
+def simulate(days=80):
     state = initial.copy()
-    for day in range(80):
+    for day in range(days):
         state = advance(state)
     print(sum(state.values()))
 
 
-def part2():
-    state = initial.copy()
-    for day in range(256):
-        state = advance(state)
-    print(sum(state.values()))
-
-
-part1()
-part2()
+simulate(days=80)
+simulate(days=256)
