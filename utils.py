@@ -1,7 +1,7 @@
 
 
-def readgroups(input_file):
-    groups = open(input_file, 'r').read().strip().split('\n\n')
+def readgroups(filename='input.txt'):
+    groups = open(filename, 'r').read().strip().split('\n\n')
     groups = [[line.strip() for line in group.split('\n')] for group in groups]
     return groups
 
